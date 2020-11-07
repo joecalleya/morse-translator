@@ -9,56 +9,61 @@
 // 4. The space between letters is three units.
 // 5. The space between words is seven units.
 
-class Translate {
-    constructor(alphabet, morse){
+  {alpha:"A",morse:".-"}
+   ,{alpha:"B",morse:"-...")
+   ,{alpha:"C",morse:"-.-.")
+   ,{alpha:"D",morse:"-..")
+   ,{alpha:"E",morse:".");
+   ,{alpha:"F",morse:"..-.");
+    ,{alpha:"G",morse:"--.");
+    ,{alpha:"H",morse:"....");
+   ,{alpha:"I",morse:"..");
+    ,{alpha:"J",morse:".---");
+    ,{alpha:"K",morse:"-.-");
+    ,{alpha:"L",morse:".---");
+    ,{alpha:"M",morse:"--");
+    ,{alpha:"N",morse:"-.");
+    ,{alpha:"O",morse:"---");
+    ,{alpha:"P",morse:".--.");
+    ,{alpha:"Q",morse:"--.-");
+    ,{alpha:"R",morse:".-.");
+    {alpha:"S",morse:"...");
+    "T",morse:"-");
+    {alpha:"U","..-");
+    {alpha:"V","...-");
+    {alpha:"W",".--");
+    {alpha:"X","-..-");
+    {alpha:"Y","-.--");
+    {alpha:"Z","--..");
+    
+    console.log(Translate['Z']);
 
-    this.alphabet = alphabet;
-    this.morse = morse;
-}
- 
-  }
-const A = new Translate("A",".-");
-const B = new Translate("B","-...");
-const C = new Translate("C","-.-.");
-const D = new Translate("D","-..");
-const E = new Translate("E",".");
-const F = new Translate("F","..-.");
-const G = new Translate("G","--.");
-const H = new Translate("H","....");
-const I = new Translate("I","..");
-const J = new Translate("J",".---");
-const K = new Translate("K","-.-");
-const L = new Translate("L",".---");
-const M = new Translate("M","--");
-const N = new Translate("N","-.");
-const O = new Translate("O","---");
-const P = new Translate("P",".--.");
-const Q = new Translate("Q","--.-");
-const R = new Translate("R",".-.");
-const S = new Translate("S","...");
-const T = new Translate("T","-");
-const U = new Translate("U","..-");
-const V = new Translate("V","...-");
-const W = new Translate("W",".--");
-const X = new Translate("X","-..-");
-const Y = new Translate("Y","-.--");
-const Z = new Translate("Z","--..");
+                        //get Tesxt from box
 
-console.log(B.morse,A.morse);
+                        const text = document.querySelector('.input__text');
+                        const button = document.querySelector('.input__button');
+                        const display = document.querySelector('.display__results');
 
-//get Tesxt from box
+                        button.addEventListener('click', (event) => {
+                                                                        let input_array = text.value.split("");
+                                                                        const firstLetter = input_array[0];
+                                                                        console.log('CLICKED',firstLetter,typeof(firstLetter));
+                                                                        display.innerHTML += `${firstLetter}`
 
-const text = document.querySelector('.input__text').value;
-const button = document.querySelector('.input__button');
-const display = document.querySelector('.input__button');
+                            });
 
-button.addEventListener('click', (event) => {
-                                                console.log('CLICKED',text);
-                                                const number = event.target.value;
-                                                display.innerHTML
-    });
+                            // translate = () => {
 
-// 3. listen on thing
+
+
+  translateToMorse = inputArray => {
+    inputArray.map(letter = () => {
+                    const result = Translate[letter];
+                    console.log(result)
+                    return result
+                  })};
+translateToMorse(['B'])
+// 3. listen on thing s
 
 // 4. on click 
 
