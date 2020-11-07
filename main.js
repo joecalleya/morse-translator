@@ -9,72 +9,112 @@
 // 4. The space between letters is three units.
 // 5. The space between words is seven units.
 
-  {alpha:"A",morse:".-"}
-   ,{alpha:"B",morse:"-...")
-   ,{alpha:"C",morse:"-.-.")
-   ,{alpha:"D",morse:"-..")
-   ,{alpha:"E",morse:".");
-   ,{alpha:"F",morse:"..-.");
-    ,{alpha:"G",morse:"--.");
-    ,{alpha:"H",morse:"....");
-   ,{alpha:"I",morse:"..");
-    ,{alpha:"J",morse:".---");
-    ,{alpha:"K",morse:"-.-");
-    ,{alpha:"L",morse:".---");
-    ,{alpha:"M",morse:"--");
-    ,{alpha:"N",morse:"-.");
-    ,{alpha:"O",morse:"---");
-    ,{alpha:"P",morse:".--.");
-    ,{alpha:"Q",morse:"--.-");
-    ,{alpha:"R",morse:".-.");
-    {alpha:"S",morse:"...");
-    "T",morse:"-");
-    {alpha:"U","..-");
-    {alpha:"V","...-");
-    {alpha:"W",".--");
-    {alpha:"X","-..-");
-    {alpha:"Y","-.--");
-    {alpha:"Z","--..");
-    
-    console.log(Translate['Z']);
 
-                        //get Tesxt from box
+translate = [
+  {
+    alpha: " ",
+    morse: "......."
+},{
+  alpha: "A",
+  morse: ".-"
+}, {
+  alpha: "B",
+  morse: "-..."
+}, {
+  alpha: "C",
+  morse: "-.-."
+}, {
+  alpha: "D",
+  morse: "-.."
+}, {
+  alpha: "E",
+  morse: "."
+}, {
+  alpha: "F",
+  morse: "..-."
+}, {
+  alpha: "G",
+  morse: "--."
+}, {
+  alpha: "H",
+  morse: "...."
+}, {
+  alpha: "I",
+  morse: ".."
+}, {
+  alpha: "J",
+  morse: ".---"
+}, {
+  alpha: "K",
+  morse: "-.-"
+}, {
+  alpha: "L",
+  morse: ".---"
+}, {
+  alpha: "M",
+  morse: "--"
+}, {
+  alpha: "N",
+  morse: "-."
+}, {
+  alpha: "O",
+  morse: "---"
+}, {
+  alpha: "P",
+  morse: ".--."
+}, {
+  alpha: "Q",
+  morse: "--.-"
+}, {
+  alpha: "R",
+  morse: ".-."
+}, {
+  alpha: "S",
+  morse: "..."
+}, {
+  alpha: "T",
+  morse: "-"
+}, {
+  alpha: "U",
+  morse: "..-"
+}, {
+  alpha: "V",
+  morse: "...-"
+}, {
+  alpha: "W",
+  morse: ".--"
+}, {
+  alpha: "X",
+  morse: "-..-"
+}, {
+  alpha: "Y",
+  morse: "-.--"
+}, {
+  alpha: "Z",
+  morse: "--.."
+}];
 
-                        const text = document.querySelector('.input__text');
-                        const button = document.querySelector('.input__button');
-                        const display = document.querySelector('.display__results');
+//get TRSANSLATE BY filtering the trabslate object by letter and then showing the Morse 
 
-                        button.addEventListener('click', (event) => {
-                                                                        let input_array = text.value.split("");
-                                                                        const firstLetter = input_array[0];
-                                                                        console.log('CLICKED',firstLetter,typeof(firstLetter));
-                                                                        display.innerHTML += `${firstLetter}`
+const translateLetterToMorse = (letter) => {
+  filtered = translate.filter((item) => (item.alpha == letter.toUpperCase()))
+  return filtered[0].morse;
+}
 
-                            });
+//get TEXT from box ON PAGE
 
-                            // translate = () => {
+const text = document.querySelector('.input__text');
+const button = document.querySelector('.input__button');
+const display = document.querySelector('.display__results');
 
+button.addEventListener('click', (event) => {
+    let outputArray = [];
 
-
-  translateToMorse = inputArray => {
-    inputArray.map(letter = () => {
-                    const result = Translate[letter];
-                    console.log(result)
-                    return result
-                  })};
-translateToMorse(['B'])
-// 3. listen on thing s
-
-// 4. on click 
-
-//  change to morese
-
-// arrays
-// is else
-// switch
-// objects
-
-
-// 7. display results. 
-
-// 8. Refesh button - 
+    let input_array = text.value.split("");
+    // we want  to map over each letter in the input_array and trnslate each one in tern
+    input_array.map((letter) => {
+      console.log(letter)
+      outputArray.push(translateLetterToMorse(letter))
+    })
+    display.innerHTML = `${outputArray}`
+  });

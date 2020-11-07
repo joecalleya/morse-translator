@@ -12,3 +12,10 @@ body
         height: 1%;
 
     }
+
+    .display__results{
+            width: 200px;
+            height: 100px;
+            font-size: 120%;
+
+    }
