@@ -8,12 +8,13 @@ exports["default"] = void 0;
 var _translate = require("../../data/translate.js");
 
 var inputIsLetters = new RegExp('[0-9a-z\\s]', 'i');
-var inputIsMorse = new RegExp('[\.\-\\s]', 'i'); // Create in/output object
-
-var outputArray = [];
-var input_array = []; //get translate BY filtering the translate object by letter and then showing the Morse 
+var inputIsMorse = new RegExp('[\.\-\\s]', 'i'); //get translate BY filtering the translate object by letter and then showing the Morse 
 
 var translateText = function translateText(input) {
+  // Create in/output object
+  var outputArray = [];
+  var input_array = [];
+
   if (input.match(inputIsLetters)) {
     console.log("Letters");
     input_array = input.split(""); // we want  to map over each letter in the input_array and TRANSLATE each one in tern
@@ -35,7 +36,7 @@ var translateText = function translateText(input) {
     outputArray = "Please only use alpha numeric or morse";
   }
 
-  return outputArray;
+  return outputArray.toString();
 };
 
 var _default = translateText;

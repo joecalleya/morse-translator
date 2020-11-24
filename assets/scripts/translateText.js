@@ -6,12 +6,14 @@ import {
 var inputIsLetters = new RegExp('[0-9a-z\\s]', 'i');
 var inputIsMorse = new RegExp('[\.\-\\s]', 'i');
 
-// Create in/output object
-let outputArray = [];
-var input_array = []
+
 
 //get translate BY filtering the translate object by letter and then showing the Morse 
 const translateText = (input) => {
+
+// Create in/output object
+let outputArray = [];
+var input_array = [];
 
   if (input.match(inputIsLetters)) {
     console.log("Letters")
@@ -30,7 +32,7 @@ const translateText = (input) => {
   } else {
     outputArray = "Please only use alpha numeric or morse"
   }
-  return outputArray
+  return outputArray.toString()
 
 }
 
