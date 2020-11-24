@@ -7,20 +7,35 @@ exports["default"] = void 0;
 
 var _translate = require("../../data/translate.js");
 
-var translateText = function translateText(from, letter) {
-  var filtered = []; // if morse input
+var inputIsLetters = new RegExp('[0-9a-z\\s]', 'i');
+var inputIsMorse = new RegExp('[\.\-\\s]', 'i'); // Create in/output object
 
-  if (from == "Alpha") {
-    filtered = _translate.translate.filter(function (item) {
-      return item.alpha == letter.toUpperCase();
-    })[0].morse;
+var outputArray = [];
+var input_array = []; //get translate BY filtering the translate object by letter and then showing the Morse 
+
+var translateText = function translateText(input) {
+  if (input.match(inputIsLetters)) {
+    console.log("Letters");
+    input_array = input.split(""); // we want  to map over each letter in the input_array and TRANSLATE each one in tern
+
+    input_array.map(function (letter) {
+      outputArray.push(_translate.translate.filter(function (item) {
+        return item.alpha == letter.toUpperCase();
+      })[0].morse);
+    });
+  } else if (input.match(inputIsMorse)) {
+    console.log("Morse");
+    input_array = input.split(".......");
+    input_array.map(function (letter) {
+      outputArray.push(_translate.translate.filter(function (item) {
+        return item.morse == letter.toUpperCase();
+      })[0].alpha);
+    });
   } else {
-    filtered = _translate.translate.filter(function (item) {
-      return item.morse == letter.toUpperCase();
-    })[0].alpha;
+    outputArray = "Please only use alpha numeric or morse";
   }
 
-  return filtered;
+  return outputArray;
 };
 
 var _default = translateText;

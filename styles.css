@@ -3,15 +3,34 @@ body
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-items: center;
+        justify-content : center;
+    }
 
+    img {
+        position: absolute;
+        height: 80%;
+        z-index: -999;
+    }
+
+    section {
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 50%;
+
+        color: white;
+        background-color: black;
+        font-size: 130%;
     }
 
     div {
         width: 4%;
         height: 1%;
+        color: white;
 
-    }
+        }
 
     .display__results{
             width: 200px;
