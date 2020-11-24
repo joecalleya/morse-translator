@@ -1,0 +1,23 @@
+{
+  "name": "morse-code-translator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joecalleya/morse-translator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joecalleya/morse-translator/issues"
+  },
+  "homepage": "https://github.com/joecalleya/morse-translator#readme",
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "jest": "^26.6.3"
+  }
+}

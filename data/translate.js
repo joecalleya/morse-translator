@@ -1,0 +1,82 @@
+export const translate = [{
+  alpha: " ",
+  morse: "......."
+}, {
+  alpha: "A",
+  morse: ".-"
+}, {
+  alpha: "B",
+  morse: "-..."
+}, {
+  alpha: "C",
+  morse: "-.-."
+}, {
+  alpha: "D",
+  morse: "-.."
+}, {
+  alpha: "E",
+  morse: "."
+}, {
+  alpha: "F",
+  morse: "..-."
+}, {
+  alpha: "G",
+  morse: "--."
+}, {
+  alpha: "H",
+  morse: "...."
+}, {
+  alpha: "I",
+  morse: ".."
+}, {
+  alpha: "J",
+  morse: ".---"
+}, {
+  alpha: "K",
+  morse: "-.-"
+}, {
+  alpha: "L",
+  morse: ".---"
+}, {
+  alpha: "M",
+  morse: "--"
+}, {
+  alpha: "N",
+  morse: "-."
+}, {
+  alpha: "O",
+  morse: "---"
+}, {
+  alpha: "P",
+  morse: ".--."
+}, {
+  alpha: "Q",
+  morse: "--.-"
+}, {
+  alpha: "R",
+  morse: ".-."
+}, {
+  alpha: "S",
+  morse: "..."
+}, {
+  alpha: "T",
+  morse: "-"
+}, {
+  alpha: "U",
+  morse: "..-"
+}, {
+  alpha: "V",
+  morse: "...-"
+}, {
+  alpha: "W",
+  morse: ".--"
+}, {
+  alpha: "X",
+  morse: "-..-"
+}, {
+  alpha: "Y",
+  morse: "-.--"
+}, {
+  alpha: "Z",
+  morse: "--.."
+}];
