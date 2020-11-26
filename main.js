@@ -5,7 +5,7 @@ import translateText from "./assets/scripts/translateText.js"
 const inputText = document.querySelector('.input__text');
 const inputButton = document.querySelector('.input__button');
 const displayResults = document.querySelector('.display__results');
-const refreshButton = document.querySelector('.input__refresh');
+const refreshButton = document.querySelector('.refresh__button');
 
 inputButton.addEventListener('click', (event) => {
 
