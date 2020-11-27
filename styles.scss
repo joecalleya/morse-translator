@@ -94,16 +94,18 @@ section {
             background-color: $fifth-color;
             padding: 7px 20px;
             border-radius: 25px;
+            font-size: 70%;
 
         }
 
 
         .input__refresh {
             font-family: $font-family;
-            color: $sixth-color;
+            color: $second-color;
             background-color: $third-color;
             padding: 7px 20px;
             border-radius: 25px;
+            font-size: 70%;
 
         }
 
@@ -111,13 +113,14 @@ section {
 
     .input__text {
         margin: 2%;
-        width: 40%;
-        height: 50%;
+        padding: 2%;
+        width: 44%;
+        height: 60%;
         font-size: 90%;
         font-family: $font-family;
         color: $sixth-color;
         background-color: $forth-color;
-        text-align: center;
+        text-align: left;
         border-radius: 1%;
         border: 0;
 
@@ -126,10 +129,11 @@ section {
 
     .display__results {
         margin: 2%;
+        padding: 2%;
         width: 40%;
-        height: 50%;
+        height: 60%;
         font-size: 90%;
-        text-align: center;
+        text-align: left;
         color: $sixth-color;
         font-family: $font-family;
         background-color: $forth-color;

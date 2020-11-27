@@ -75,32 +75,36 @@ section .input__buttons .input__button {
   background-color: #ffd205;
   padding: 7px 20px;
   border-radius: 25px;
+  font-size: 70%;
 }
 section .input__buttons .input__refresh {
   font-family: "PT Sans", sans-serif;
-  color: #b3b8c0;
+  color: white;
   background-color: #3d50c6;
   padding: 7px 20px;
   border-radius: 25px;
+  font-size: 70%;
 }
 section .input__text {
   margin: 2%;
-  width: 40%;
-  height: 50%;
+  padding: 2%;
+  width: 44%;
+  height: 60%;
   font-size: 90%;
   font-family: "PT Sans", sans-serif;
   color: #b3b8c0;
   background-color: #f8f9fd;
-  text-align: center;
+  text-align: left;
   border-radius: 1%;
   border: 0;
 }
 section .display__results {
   margin: 2%;
+  padding: 2%;
   width: 40%;
-  height: 50%;
+  height: 60%;
   font-size: 90%;
-  text-align: center;
+  text-align: left;
   color: #b3b8c0;
   font-family: "PT Sans", sans-serif;
   background-color: #f8f9fd;
